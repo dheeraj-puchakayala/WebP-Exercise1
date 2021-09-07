@@ -3,81 +3,24 @@
         <title>
           WebCoursera           
         </title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-
-        <!-- added bundle because: third-party library popper provides dynamic positioning -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+        <script
+          src="https://code.jquery.com/jquery-3.3.1.js"
+          integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+          crossorigin="anonymous">
+        </script>
+        <script> 
+          $(function(){ $("head").load("links.html") });
+        </script>
+        <script> 
+          $(function(){ $("header").load("header.html") });
+        </script>
+        <script> 
+          $(function(){ $("footer").load("footer.html") });
+        </script>
     </head>
     <body>
 
-              <header class="p-3 bg-light text-white">
-                <div class="container">
-                  <div class="d-flex flex-wrap align-items-center justify-content-lg-start justify-content-lg-start">
-            
-                    <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-lg-start mb-md-0">
-                      <li><a href="index.html" class="nav-link px-2 text-info"><h4 class="fw-normal">WebCoursera</h4></a></li>
-                      <!-- <li><a href="#" class="nav-link px-2 text-white">Hello</a></li> -->
-                      <li>
-                        <div style="width: 25px;"></div>
-                      </li>
-                      <li>
-                        <div class="dropdown">
-                          
-                          <button class="btn btn-info dropdown-toggle" style="color:whitesmoke; margin-top: 5px;" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="bi bi-menu-button-wide fa-lg"></i>
-                              Categories
-                          </button>
-                          <!-- <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                          <li><a class="dropdown-item" href="#">Link 1</a></li>
-                          <li><a class="dropdown-item" href="#">Link 2</a></li>
-                          <li><a class="dropdown-item" href="#">Link 3</a></li>
-                          </ul> -->
-                          <ul class="dropdown-menu dropdown-menu-macos mx-0 shadow" style="width: 220px;">
-                            <li><a class="dropdown-item " href="#">HTML</a></li>
-                            <li><a class="dropdown-item" href="#">CSS</a></li>
-                            <li><a class="dropdown-item" href="#">JAVASCRIPT</a></li>
-                            <li><a class="dropdown-item" href="#">JAVA</a></li>
-                            <li><a class="dropdown-item" href="#">AJAX</a></li>
-                            <li><a class="dropdown-item" href="#">PYTHON</a></li>
-                            <!-- <li><hr class="dropdown-divider"></li> -->
-                          </ul>
-                        </div>
-
-                      </li>
-                      <!-- <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
-                      <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
-                      <li><a href="#" class="nav-link px-2 text-white">About</a></li> -->
-                    </ul>
-                   
-                    <!-- <div style="float:left; margin:5px;">
-                        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-                            <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
-                            <button type="submit"><i class="bi bi-search"></i></button>
-                        </form>
-                    </div> -->
-
-                    <div class="input-group w-25">
-                        <span class="input-group-text" style="padding: 0px; border-radius: 5px;" id="basic-addon1">
-                            <button type="submit" class="btn"><i class="bi bi-search fa-lg" style="color:#5bc0de"></i></button>  
-                            <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
-                        </span>
-                        <!-- <input type="text" class="form-control" placeholder="Search" aria-label="Input group example" aria-describedby="basic-addon1"> -->
-                    </div>
-
-                    <div style="width: 25px;"></div>
-            
-                    <div class="text-end">
-                      <a class="btn btn-outline-dark me-2" href="login.html" role="button"><i class="bi bi-person-circle fa-lg"></i>  Login</a>
-                      <!-- <button type="button" class="btn btn-outline-dark me-2"><i class="bi bi-person-circle fa-lg"></i>  Login</button> -->
-                      <a class="btn btn-outline-info" href="signup.html" role="button"><i class="bi bi-person-plus fa-lg"></i>  SignUp</a>
-                      <!-- <button type="button" class="btn btn-outline-info"><i class="bi bi-person-plus fa-lg"></i>  SignUp</button>   -->
-                    </div>
-                  </div>
-                </div>
-                
-              </header>
+              <header></header>
               
 
                 <!-- policy part -->
@@ -97,15 +40,6 @@
                 </section>
                 <!-- policy part end -->
 
-              <footer class="py-3 my-4">
-                <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-                  <li class="nav-item"><a href="terms.html" class="nav-link px-2 text-muted">Terms and Conditions</a></li>
-                  <li class="nav-item"><a href="policy.html" class="nav-link px-2 text-muted">Privacy policy</a></li>
-                  <li class="nav-item"><a href="help.html" class="nav-link px-2 text-muted">Help and support</a></li>
-                  <!-- <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Contact US</a></li> -->
-                  <li class="nav-item"><a href="about.html" class="nav-link px-2 text-muted">About</a></li>
-                </ul>
-                <p class="text-center text-muted"> Group 16, WebP</p>
-              </footer>
+              <footer></footer>
     </body>
 </html>
