@@ -3,6 +3,40 @@
         <title>
             Login
         </title>
+        <script>
+          var limit = 5
+          function login_logic() {
+            let uname = document.getElementById("username").value;
+            let pword = document.getElementById("password").value;
+            if(uname == "root@abc.com" && pword == "root"){
+              alert("Successfull Login")
+              let name = "session"
+              document.cookie = name +'= 1; Path=/;'
+              document.location = "index.html";
+              // return false;
+            }
+            
+            else{
+              limit--;
+              alert(uname + pword + "\nIncorrect Credentials\n" + limit + " attempts left" )
+            }
+
+            if (limit == 0) {
+              document.getElementById("username").disabled = true;
+              document.getElementById("password").disabled = true;
+              document.getElementById("login").disabled = true;
+              
+              setTimeout(function(){
+                document.getElementById("username").disabled = false;
+                document.getElementById("password").disabled = false;
+                document.getElementById("login").disabled = false;
+                document.location = "login.html"
+              }, 30000);
+
+              
+            }
+          }
+        </script>
         <script
           src="https://code.jquery.com/jquery-3.3.1.js"
           integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
@@ -28,16 +62,16 @@
               </div>
         
               <div class="modal-body p-5 pt-0">
-                <form class="">
+                <form>
                   <div class="form-floating mb-3">
-                    <input type="email" class="form-control rounded-4" id="floatingInput" placeholder="name@example.com">
+                    <input id ="username" type="email" class="form-control rounded-4" id="floatingInput" placeholder="name@example.com">
                     <label for="floatingInput">Email address</label>
                   </div>
                   <div class="form-floating mb-3">
-                    <input type="password" class="form-control rounded-4" id="floatingPassword" placeholder="Password">
+                    <input id = "password" type="password" class="form-control rounded-4" id="floatingPassword" placeholder="Password">
                     <label for="floatingPassword">Password</label>
                   </div>
-                  <button onclick="location.href = 'index_session.html';"class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit">Login</button>
+                  <button id="login" class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="reset" onclick="login_logic()">Login</button>
                   <!-- <small class="text-muted">By clicking Sign up, you agree to the terms of use.</small> -->
                   <hr class="my-4">
                   New to WebCoursera? <a href="signup.html" style="text-decoration: none;"> Sign up </a>
