@@ -18,7 +18,7 @@
             
             else{
               limit--;
-              alert(uname + pword + "\nIncorrect Credentials\n" + limit + " attempts left" )
+              alert("\nIncorrect Credentials\n" + limit + " attempts left" )
             }
 
             if (limit == 0) {
@@ -31,7 +31,7 @@
                 document.getElementById("password").disabled = false;
                 document.getElementById("login").disabled = false;
                 document.location = "login.html"
-              }, 30000);
+              }, 3000);
 
               
             }
